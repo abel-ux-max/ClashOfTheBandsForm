@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    height:100%;
+    width:100%;
+    
+    
+}
+#mainheader{
+    height:60px;
+    width:100%;
+    background-color: black;
+}
+#jezik{
+    line-height: 60px;
+    float:right;
+    position: sticky;
+    margin-right: 20px;
+    letter-spacing: 10px;
+    font-size: 20px;
+    
+}
+#naslov{
+    text-align: center;
+    padding: 5vw;
+}
+#naslov h1{
+    font-family: "New Rocker", system-ui;
+    
+    text-transform: uppercase;
+}
+.new-rocker-regular {
+  font-family: "New Rocker", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
