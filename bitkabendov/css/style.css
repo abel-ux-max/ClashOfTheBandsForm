@@ -4,18 +4,22 @@
     margin:0;
     padding:0;
 }
-html,body,#mainblock{
+html,body{
     height:100%;
     width:100%;
     font-family: "Source Sans 3", sans-serif;
     
 }
 #mainblock{
-    background-image: url("../img/background.jpg");
     background-repeat: repeat-y;
+    background-image: url("../img/background.jpg");
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
  
 #langblock{
+    
     height:60px;
     width:100%;
     background-color: black;
@@ -35,6 +39,7 @@ html,body,#mainblock{
     font-size: 50px;
     margin:0 auto;
     color:white;
+    cursor: pointer;
     text-shadow: 2px 2px 0 #9c0000, 2px -2px 0 #9c0000, -2px 2px 0 #9c0000, -2px -2px 0 #9c0000, 2px 0px 0 #9c0000, 0px 2px 0 #9c0000, -2px 0px 0 #9c0000, 0px -2px 0 #9c0000;
 }
 #language{
@@ -49,6 +54,8 @@ html,body,#mainblock{
 #formblock{
     width: 50vw;
     margin: auto;
+    flex-grow:1;
+
 }
 #signhead{
     font-family: "Source Sans 3", sans-serif;
@@ -83,7 +90,7 @@ html,body,#mainblock{
     line-height: 1.5;
     font-size: 1em;
     margin: 2px;
-    transition: border .1s ease-in-out, color .1s ease-in-out;
+    transition: border .3s ease-in-out, color .3s ease-in-out;
     margin: 15px auto;
     width:90%;
 
@@ -97,12 +104,106 @@ html,body,#mainblock{
     border:#9c0000 2px solid;
     box-shadow: 0 0 8px 8px #9c000056;
 }
+
 #formblock h3{
    color:white; 
+   margin-bottom: 10px;
+}
+button,input[type=submit]{
+    background-color: #9c0000;
+    color:white;
+    border:#c40000 2px solid;
+    padding:8px;
+    font-size: 1em;
+    border-radius:6px;
+    transition: border 0.2s, box-shadow 0.5s;
+ }
+ button:hover,input[type=submit]:hover{
+    border:#e20000 2px solid;
+    box-shadow: 0 0 8px 8px #9c000056;
+ }
+    #song1,#song2,#song3{
+    display:grid;
+    grid-template-columns: 6vw auto;
+ }
+ .songnumber{
+    background-color: #9c0000;
+    margin:6px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+ }
+ #biography, #photography, #rider {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+#biography label, #photography label, #rider label {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1em;
+  line-height: 1.4;
+}
+#bio {
+  resize: none;
+  min-height: 150px;
+  border: 2px solid #353535;
+  background-color: #2e2e2e;
+  border-radius: 6px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .1);
+  color: rgb(199,199,199);
+  padding: 10px;
+  font-size: 1em;
+  font-family: "Source Sans 3", sans-serif;
+  transition: border .1s ease-in-out, color .1s ease-in-out, box-shadow .1s ease-in-out;
+}
+#bio:focus {
+  outline: none;
+  border: 2px solid #9c0000;
+  color: white;
+  box-shadow: 0 0 8px 6px #9c000056;
+}
+
+#photography input[type="file"],
+#rider input[type="file"] {
+  border: 2px dashed #555;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: rgb(220, 220, 220);
+  padding: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#photography input[type="file"]:hover,
+#rider input[type="file"]:hover {
+  border-color: #9c0000;
+  background-color: #222;
+}
+::file-selector-button{
+    background-color:#353535;
+    color:white;
+    border: 2px solid #555;
+    border-radius: 6px;
+}
+::file-selector-button:hover{
+    cursor:pointer;
+}
+
+#biography textarea,
+#photography input,
+#rider input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 #mainfoot{
-    position: relative;
+    margin-top: auto;
     width: 100%;
     color:white;
     text-align: center;
@@ -115,13 +216,16 @@ html,body,#mainblock{
     text-transform: capitalize;
     text-decoration: none;
 }
+
+
 .step { display: none; }
 .step.active { display: block; }
+
 
 .progress {
   display: flex;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 .progress div {
   flex: 1;

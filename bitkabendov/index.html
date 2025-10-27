@@ -47,7 +47,7 @@
                             <input class="vnos" type="text" name="ime_benda" required placeholder="Izvajalec">
                             <input class="vnos" type="text" name="ime_predstavnika" required placeholder="Ime in priimek predstavnika">
                             <input class="vnos" type="email" name="email" required placeholder="Naslov e-pošte">
-                            <input class="vnos" type="tel" name="telnum" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="Telefonska številka npr. 040 128 123" required >
+                            <input class="vnos" type="tel" name="telnum" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" placeholder="Telefonska številka v obliki: 000 000 000" required >
                             <div class="controls">
                                 <button type="button" class="next">Naprej</button>
                             </div>
@@ -107,13 +107,13 @@
                             </div>
 
                             <div id="rider">
-                                <label for="rider">Naložite tehnični rider. To je dokument s katerim opišete vaš koncertni nastop: koliko ljudi je na odru, katere inštrumente igrajo, koliko članov poje, kaj od opreme potrebujete itd.  </label>
+                                <label for="rider">Naložite tehnični rider. To je dokument s katerim opišete vaš koncertni nastop: koliko ljudi je na odru, katere inštrumente igrajo, koliko članov poje, kaj od opreme potrebujete itd.</label>
                                 <input type="file" id="rider" name="rider">
                             </div>
                            
                             <div class="controls">
                                 <button type="button" class="prev">Nazaj</button>
-                                <button type="submit" class="next">Pošlji</button>
+                                <input type="submit" class="next" value="Pošlji">
                             </div>
                         </div>
 
