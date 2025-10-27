@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sl-SL">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +9,118 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>Bitka Bendov</title>
 </head>
+
 <body>
-    <div id="glavniblok">
+    <div id="mainblock">
         <header id="mainheader">
-            <div id="jezik">
-               <a href="index.html"><span class="fi fi-si"></span></a>
+            <div id="language">
+                <a href="index.html"><span class="fi fi-si"></span></a>
                 <a href="index-en.html"><span class="fi fi-gb"></span></a>
             </div>
-            
-            
+
+
         </header>
-        
-        <section> 
-            <header id="prijavahead">Prijava na bitko bendov</header>
-            <article id="prijava"> 
-                <form method="POST" action="">
-                    <div id="kontakt">
-                        <div>
 
-                        </div>
-                        <div>
+        <section>
+            <header id="signhead">Prijava na bitko bendov</header>
+            <article id="sign">
+                <form id="signform" method="POST" action="">
 
+                    <div class="progress">
+                        <div class="p1 active">1</div>
+                        <div class="p2">2</div>
+                        <div class="p3">3</div>
+                    </div>
+
+                    <div class="steps">
+                        <!-- KORAK 1 / STEP 1-->
+                        <div class="step s1 active">
+                            <h3>Podatki izvajalca</h3>
+                            <input class="vnos" type="text" name="ime_benda" required placeholder="Izvajalec">
+                            <input class="vnos" type="text" name="ime_predstavnika" required placeholder="Ime in priimek predstavnika">
+                            <input class="vnos" type="email" name="email" required placeholder="Naslov e-pošte">
+                            <input class="vnos" type="tel" name="telnum" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" placeholder="Telefonska številka npr. 040 128 123" >
+                            <div class="controls">
+                                <button type="button" class="next">Naprej</button>
+                            </div>
                         </div>
+
+                        <!-- KORAK 2 / STEP 2-->
+                        <div class="step s2">
+                            <h3>Glasbeni material</h3>
+                            <div id="song1">
+                                <div class="songnumber">
+                                    1
+                                </div>
+                                <div class="songdetails">
+                                    <input class="vnos" type="text" name="song1name" required placeholder="Naslov skladbe 1">
+                                    <input class="vnos" type="text" name="song1author" required placeholder="Avtorji skladbe 1">
+                                    <input class="vnos" type="url" name="song1link" required placeholder="Povezava do skladbe 1">
+                                </div>
+                            </div>
+                             <div id="song2">
+                                <div class="songnumber">
+                                    1
+                                </div>
+                                <div class="songdetails">
+                                    <input class="vnos" type="text" name="song2name" required placeholder="Naslov skladbe 2">
+                                    <input class="vnos" type="text" name="song2author" required placeholder="Avtorji skladbe 2">
+                                    <input class="vnos" type="url" name="song2link" required placeholder="Povezava do skladbe 2">
+                                </div>
+                            </div>
+                            <div id="song3">
+                                <div class="songnumber">
+                                    1
+                                </div>
+                                <div class="songdetails">
+                                    <input class="vnos" type="text" name="song3name" required placeholder="Naslov skladbe 3">
+                                    <input class="vnos" type="text" name="song3author" required placeholder="Avtorji skladbe 3">
+                                    <input class="vnos" type="url" name="song3link" required placeholder="Povezava do skladbe 3">
+                                </div>
+                            </div>
+                            <div class="controls">
+                                <button type="button" class="prev">Nazaj</button>
+                                <button type="button" class="next">Naprej</button>
+                            </div>
+                        </div>
+
+                        <!-- KORAK 3 / STEP 3-->
+                        <div class="step s3">
+                            <h3>Bio,foto in rider</h3>
+
+                            <div id="biography">
+                                <label for="bio">Sem prilepite kratko biografijo. Vsebovati mora povezave do vaših družbenih omrežij.</label>
+                                <textarea id="bio" name="bio"></textarea>
+                            </div>
+
+                            <div id="photography">
+                                <label for="photo">Naložite fotografijo, ki bo uporabljena za promocijo</label>
+                                <input type="file" id="photo" name="photo">
+                            </div>
+
+                            <div id="rider">
+                                <label for="rider">Naložite tehnični rider. To je dokument s katerim opišete vaš koncertni nastop: koliko ljudi je na odru, katere inštrumente igrajo, koliko članov poje, kaj od opreme potrebujete itd.  </label>
+                                <input type="file" id="rider" name="rider">
+                            </div>
+                           
+                            <div class="controls">
+                                <button type="button" class="prev">Nazaj</button>
+                                <button type="submit" class="next">Pošlji</button>
+                            </div>
+                        </div>
+
                     </div>
                 </form>
             </article>
-            <footer id="prijavafoot"> </footer>
+            <footer id="signfoot"> </footer>
         </section>
-        
+
         <footer>
             <div> privacy policy|cookie policy</div>
             <div></div>
         </footer>
     </div>
+    <script src="js/form.js"></script>
 </body>
+
 </html>
