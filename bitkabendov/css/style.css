@@ -1,20 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 *{
     margin:0;
     padding:0;
 }
-html,body{
+html,body,#mainblock{
     height:100%;
     width:100%;
-    
+    font-family: "Source Sans 3", sans-serif;
     
 }
-#mainheader{
+#mainblock{
+    background-image: url("../img/background.jpg");
+    background-repeat: repeat-y;
+}
+ 
+#langblock{
     height:60px;
     width:100%;
     background-color: black;
 }
-#jezik{
+#title{
+    width: 100%;
+    display: flex;
+    
+}
+#title h1{
+    padding: 20px;
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    margin:0 auto;
+    color:white;
+    text-shadow: 2px 2px 0 #9c0000, 2px -2px 0 #9c0000, -2px 2px 0 #9c0000, -2px -2px 0 #9c0000, 2px 0px 0 #9c0000, 0px 2px 0 #9c0000, -2px 0px 0 #9c0000, 0px -2px 0 #9c0000;
+}
+#language{
     line-height: 60px;
     float:right;
     position: sticky;
@@ -23,17 +46,98 @@ html,body{
     font-size: 20px;
     
 }
-#naslov{
+#formblock{
+    width: 50vw;
+    margin: auto;
+}
+#signhead{
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    color:white;
+    background-color: #9c0000;
+    border-radius: 6px;
+    margin:0;
+    margin-bottom: 15px;
+    padding: 5px;
     text-align: center;
-    padding: 5vw;
+    font-size: 1.5em;
 }
-#naslov h1{
-    font-family: "New Rocker", system-ui;
+#sign{
+    border: #353535 2px solid;
+    padding:15px;
+    margin:0 auto;
+    width:75%;
+    background-color: #0a0a0a;
+    border-radius: 6px;
     
-    text-transform: uppercase;
 }
-.new-rocker-regular {
-  font-family: "New Rocker", system-ui;
-  font-weight: 400;
-  font-style: normal;
+.vnos{
+    border: #353535 2px solid;
+    background-color: #2e2e2e;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .1);
+    color:rgb(199, 199, 199);
+    display: block;
+    padding: 8px;
+    height: auto;
+    line-height: 1.5;
+    font-size: 1em;
+    margin: 2px;
+    transition: border .1s ease-in-out, color .1s ease-in-out;
+    margin: 15px auto;
+    width:90%;
+
 }
+.vnos:hover{
+    border:#464646 2px solid;
+}
+.vnos:focus{
+    color:white;
+    outline: none;
+    border:#9c0000 2px solid;
+    box-shadow: 0 0 8px 8px #9c000056;
+}
+#formblock h3{
+   color:white; 
+}
+
+#mainfoot{
+    position: relative;
+    width: 100%;
+    color:white;
+    text-align: center;
+    height:60px;
+    line-height: 60px;
+    background-color: black;
+}
+#mainfoot a{
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.step { display: none; }
+.step.active { display: block; }
+
+.progress {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.progress div {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  background: #ddd;
+  border-radius: 6px;
+}
+.progress .active {
+  background: #9c0000;
+  color: white;
+}
+
+.controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+

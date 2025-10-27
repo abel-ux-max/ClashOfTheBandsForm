@@ -7,22 +7,30 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="img/favicon.ico" type="image/icon-x">
     <title>Bitka Bendov</title>
 </head>
 
 <body>
     <div id="mainblock">
         <header id="mainheader">
-            <div id="language">
-                <a href="index.html"><span class="fi fi-si"></span></a>
-                <a href="index-en.html"><span class="fi fi-gb"></span></a>
+            <div id="langblock">
+                
+                <div id="language">
+                    <a href="index.html"><span class="fi fi-si"></span></a>
+                    <a href="index-en.html"><span class="fi fi-gb"></span></a>
+                </div>
             </div>
-
-
+           
+            <div id="title">
+                <h1>Bitka bendov</h1>
+            </div>
         </header>
 
-        <section>
-            <header id="signhead">Prijava na bitko bendov</header>
+        <section id="formblock">
+
+            <header id="signhead">Prijava</header>
+            
             <article id="sign">
                 <form id="signform" method="POST" action="">
 
@@ -39,7 +47,7 @@
                             <input class="vnos" type="text" name="ime_benda" required placeholder="Izvajalec">
                             <input class="vnos" type="text" name="ime_predstavnika" required placeholder="Ime in priimek predstavnika">
                             <input class="vnos" type="email" name="email" required placeholder="Naslov e-pošte">
-                            <input class="vnos" type="tel" name="telnum" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" placeholder="Telefonska številka npr. 040 128 123" >
+                            <input class="vnos" type="tel" name="telnum" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="Telefonska številka npr. 040 128 123" required >
                             <div class="controls">
                                 <button type="button" class="next">Naprej</button>
                             </div>
@@ -60,7 +68,7 @@
                             </div>
                              <div id="song2">
                                 <div class="songnumber">
-                                    1
+                                    2
                                 </div>
                                 <div class="songdetails">
                                     <input class="vnos" type="text" name="song2name" required placeholder="Naslov skladbe 2">
@@ -70,7 +78,7 @@
                             </div>
                             <div id="song3">
                                 <div class="songnumber">
-                                    1
+                                    3
                                 </div>
                                 <div class="songdetails">
                                     <input class="vnos" type="text" name="song3name" required placeholder="Naslov skladbe 3">
@@ -112,11 +120,12 @@
                     </div>
                 </form>
             </article>
-            <footer id="signfoot"> </footer>
+            <footer id="signfoot">
+                 </footer>
         </section>
 
-        <footer>
-            <div> privacy policy|cookie policy</div>
+        <footer id="mainfoot">
+            <div><a href="https://ers.scng.si">privacy policy | cookie policy</a></div>
             <div></div>
         </footer>
     </div>
