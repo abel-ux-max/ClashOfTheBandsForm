@@ -1,19 +1,5 @@
 const steps = document.querySelectorAll(".step");
 const progress = document.querySelectorAll(".progress div");
-const messages = {
-  sl: {
-    emptyTitle: "Prazna polja",
-    emptyText: "Prosimo, izpolnite vsa zahtevana polja pravilno pred oddajo.",
-    successTitle: "Oddaja uspešna!",
-    successText: "Hvala za prijavo na Bitko bendov.",
-  },
-  en: {
-    emptyTitle: "Missing fields",
-    emptyText: "Please fill in all required fields before submitting.",
-    successTitle: "Submission successful!",
-    successText: "Thank you for registering for the Battle of the Bands.",
-  }
-};
 let current = 0;
 
 function showStep(i) {
@@ -29,12 +15,22 @@ document.querySelectorAll(".next").forEach(btn => {
       if (!inp.checkValidity()) {
         inp.reportValidity();
         allValid = false;
-        Swal.fire({
-        icon: "warning",
-        title: lang.startsWith("en") ? "Missing fields!" : "Prazna polja!",
-        text: lang.startsWith("en") ? "Please fill in all required fields before submitting." : "Prosimo, izpolnite vsa zahtevana polja pravilno pred oddajo.",
-        confirmButtonColor: "#9c0000"
-      });
+        if (lang.startsWith("en")) {
+          Swal.fire({
+            icon: "warning",
+            title: "Missing fields",
+            text: "Please fill in all required fields before submitting.",
+            confirmButtonColor: "#9c0000"
+          });
+        }
+        else if (lang.startsWith("sl")) {
+          Swal.fire({
+            icon: "warning",
+            title: "Prazna polja",
+            text: "Prosimo izpolnite vsa polja pravilno pred oddajo.",
+            confirmButtonColor: "#9c0000"
+          });
+        }
 
         return;
 
@@ -57,17 +53,31 @@ document.querySelector("#signform").addEventListener("submit", e => {
   e.preventDefault();
 
 
+
+  if (lang.startsWith("en")) {
     Swal.fire({
-    icon: "success",
-    title: lang.startsWith("en") ? "Submission successful!" : "Oddaja uspešna!",
-    text: lang.startsWith("en") ? "Thank you for registering for the Battle of the Bands." : "Hvala za prijavo na Bitko bendov.",
-    confirmButtonColor: "#9c0000"
+      icon: "success",
+      title: "Submission successful!",
+      text: "Thank you for registering for the Clash of the Bands.",
+      confirmButtonColor: "#9c0000"
     }).then(() => {
       document.querySelector("#signform").reset();
       current = 0;
       showStep(current);
     });
-  
+  }
+  else if (lang.startsWith("sl")) {
+    Swal.fire({
+      icon: "success",
+      title: "Oddaja uspešna!",
+      text: "Hvala za prijavo na Bitko bendov.",
+      confirmButtonColor: "#9c0000"
+    }).then(() => {
+      document.querySelector("#signform").reset();
+      current = 0;
+      showStep(current);
+    });
+  }
 
 
 });
