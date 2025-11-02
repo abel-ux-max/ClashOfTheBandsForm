@@ -98,17 +98,17 @@
 
                             <div id="biography">
                                 <label for="bio">Sem prilepite kratko biografijo. Vsebovati mora povezave do vaših družbenih omrežij.</label>
-                                <textarea id="bio" name="bio"></textarea>
+                                <textarea id="bio" name="bio" required></textarea>
                             </div>
 
                             <div id="photography">
                                 <label for="photo">Naložite fotografijo, ki bo uporabljena za promocijo</label>
-                                <input type="file" id="photo" name="photo">
+                                <input type="file" id="photo" name="photo" required>
                             </div>
 
                             <div id="rider">
                                 <label for="rider">Naložite tehnični rider. To je dokument s katerim opišete vaš koncertni nastop: koliko ljudi je na odru, katere inštrumente igrajo, koliko članov poje, kaj od opreme potrebujete itd.</label>
-                                <input type="file" id="rider" name="rider">
+                                <input type="file" id="rider" name="rider" required>
                             </div>
                            
                             <div class="controls">
@@ -125,10 +125,11 @@
         </section>
 
         <footer id="mainfoot">
-            <div><a href="https://ers.scng.si">privacy policy | cookie policy</a></div>
+            <div><a href="">privacy policy | cookie policy</a></div>
             <div></div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/form.js"></script>
 </body>
 

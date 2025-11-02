@@ -245,3 +245,17 @@ button,input[type=submit]{
   justify-content: space-between;
 }
 
+/* sweet alert stil */
+.swal2-popup {
+  background: #0a0a0a;
+  color: #fff ;
+  border: 2px solid #9c0000;
+}
+.swal2-title {
+  color: #fff ;
+  text-shadow: 0 0 5px #9c0000;
+}
+.swal2-confirm {
+  background-color: #9c0000;
+  border: none;
+}
