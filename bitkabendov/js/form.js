@@ -31,19 +31,14 @@ document.querySelectorAll(".next").forEach(btn => {
     showStep(current);
   });
 });
-
 document.querySelectorAll(".prev").forEach(btn => {
   btn.addEventListener("click", () => {
     if (current > 0) current--;
     showStep(current);
   });
 });
-
-
 document.querySelector("#signform").addEventListener("submit", e => {
   e.preventDefault();
-
-
     Swal.fire({
     icon: "success",
     title: "Submission successful!",
@@ -54,7 +49,4 @@ document.querySelector("#signform").addEventListener("submit", e => {
       current = 0;
       showStep(current);
     });
-  
-
-
 });
