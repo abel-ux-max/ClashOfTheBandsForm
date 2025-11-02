@@ -1,19 +1,6 @@
 const steps = document.querySelectorAll(".step");
 const progress = document.querySelectorAll(".progress div");
-const messages = {
-  sl: {
-    emptyTitle: "Prazna polja",
-    emptyText: "Prosimo, izpolnite vsa zahtevana polja pravilno pred oddajo.",
-    successTitle: "Oddaja uspešna!",
-    successText: "Hvala za prijavo na Bitko bendov.",
-  },
-  en: {
-    emptyTitle: "Missing fields",
-    emptyText: "Please fill in all required fields before submitting.",
-    successTitle: "Submission successful!",
-    successText: "Thank you for registering for the Battle of the Bands.",
-  }
-};
+
 let current = 0;
 
 function showStep(i) {
@@ -31,8 +18,8 @@ document.querySelectorAll(".next").forEach(btn => {
         allValid = false;
         Swal.fire({
         icon: "warning",
-        title: lang.startsWith("en") ? "Missing fields!" : "Prazna polja!",
-        text: lang.startsWith("en") ? "Please fill in all required fields before submitting." : "Prosimo, izpolnite vsa zahtevana polja pravilno pred oddajo.",
+        title: "Missing fields!" ,
+        text: "Please fill in all required fields before submitting." ,
         confirmButtonColor: "#9c0000"
       });
 
@@ -59,8 +46,8 @@ document.querySelector("#signform").addEventListener("submit", e => {
 
     Swal.fire({
     icon: "success",
-    title: lang.startsWith("en") ? "Submission successful!" : "Oddaja uspešna!",
-    text: lang.startsWith("en") ? "Thank you for registering for the Battle of the Bands." : "Hvala za prijavo na Bitko bendov.",
+    title: "Submission successful!",
+    text: "Thank you for registering for the Battle of the Bands.",
     confirmButtonColor: "#9c0000"
     }).then(() => {
       document.querySelector("#signform").reset();
