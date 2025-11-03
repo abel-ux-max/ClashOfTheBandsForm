@@ -4,9 +4,13 @@ const lang = document.documentElement.lang || "sl";
  
 let current = 0;
 
-function showStep(i) {
-  steps.forEach((s, idx) => s.classList.toggle("active", idx === i));
-  progress.forEach((p, idx) => p.classList.toggle("active", idx === i));
+function showStep(i) { 
+  for (var idx = 0; idx < steps.length; idx++) {
+    steps[idx].classList.toggle("active", idx === i);
+  }
+  for (var idx = 0; idx < progress.length; idx++) {
+    progress[idx].classList.toggle("active", idx === i);
+  }
 }
 
 document.querySelectorAll(".next").forEach(btn => {
