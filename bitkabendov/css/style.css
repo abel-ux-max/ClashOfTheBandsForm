@@ -13,11 +13,27 @@ html,body{
 #mainblock{
     background-repeat: repeat-y;
     background-image: url("../img/background.jpg");
+    background-size: cover;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+}
+.statika{
+  position:absolute;
+  inset: -200%;
+  background-image: url(../img/whitenoise.jpg);
+  opacity: 5%;
+  animation: animacija 0.1ms linear infinite both;
+}
+@keyframes animacija{
+  0%{
+    transform: translateX(10%) translateY(10%);
+  }
+  100%{
+    transform: translateX(-10%) translateY(-10%);
+  }
 }
 #mainheader{
   z-index:3 ;
@@ -227,21 +243,7 @@ button,input[type=submit]{
     text-transform: capitalize;
     text-decoration: none;
 }
-.statika{
-  position:absolute;
-  inset: -200%;
-  background-image: url(../img/whitenoise.jpg);
-  opacity: 5%;
-  animation: animacija 0.1ms linear infinite both;
-}
-@keyframes animacija{
-  0%{
-    transform: translateX(10%) translateY(10%);
-  }
-  100%{
-    transform: translateX(-10%) translateY(-10%);
-  }
-}
+
 
 
 .step { display: none; }
