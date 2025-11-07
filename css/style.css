@@ -60,6 +60,10 @@ html,body{
     margin:0 auto;
     color:white;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
     text-shadow: 2px 2px 0 #9c0000, 2px -2px 0 #9c0000, -2px 2px 0 #9c0000, -2px -2px 0 #9c0000, 2px 0px 0 #9c0000, 0px 2px 0 #9c0000, -2px 0px 0 #9c0000, 0px -2px 0 #9c0000;
 }
 #language{
@@ -287,3 +291,4 @@ button,input[type=submit]{
   
   border:#c40000 2px solid;
 }
+
