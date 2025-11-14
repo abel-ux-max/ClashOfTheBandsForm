@@ -25,43 +25,51 @@ document.querySelectorAll(".next").forEach(btn => {
         if (inp.validity.valueMissing) {
           Swal.fire({
             icon: "warning",
-            title: lang.startsWith("en") ? "Missing fields!" : "Prazna polja!",
-            text: lang.startsWith("en") ? "Please fill in all required fields before submitting." : "Prosimo, izpolnite vsa zahtevana polja pravilno pred oddajo.",
+            title: lang.startsWith("en") ? "Missing information" : "Manjkajoči podatki",
+            text: lang.startsWith("en")
+              ? "Please fill in all required fields before continuing."
+              : "Prosimo, izpolnite vsa obvezna polja pred nadaljevanjem.",
             confirmButtonColor: "#9c0000"
           });
           inp.classList.toggle("error");
         }
-        if(inp.validity.patternMismatch){
+        if (inp.validity.patternMismatch) {
           Swal.fire({
             icon: "warning",
-            title: lang.startsWith("en") ? "Wrong number format!" : "Napačen format telefonske številke!",
-            text: lang.startsWith("en") ? "Please fill in the rquired pattern 031 230 230." : "Prosimo, izpolnite v zaželeni obliki 031 230 120.",
+            title: lang.startsWith("en") ? "Invalid phone number" : "Neveljaven telefon",
+            text: lang.startsWith("en")
+              ? "Please enter a valid phone number in the format 031 234 567."
+              : "Vnesite veljavno telefonsko številko v obliki 031 234 567.",
             confirmButtonColor: "#9c0000"
           });
           inp.classList.toggle("error");
         }
-        if(inp.validity.typeMismatch){
-          if(inp.type === "email"){
+        if (inp.validity.typeMismatch) {
+          if (inp.type === "email") {
             Swal.fire({
-            icon: "warning",
-            title: lang.startsWith("en") ? "Email is not valid!" : "Email ni prou bumbar!",
-            text: lang.startsWith("en") ? "Please make sure that the email is valid." : "Email mora biti veljaven!",
-            confirmButtonColor: "#9c0000"
-          });
-          inp.classList.toggle("error");
+              icon: "warning",
+              title: lang.startsWith("en") ? "Invalid email address" : "Neveljaven email",
+              text: lang.startsWith("en")
+                ? "Please enter a valid email address."
+                : "Vnesite veljaven e-poštni naslov.",
+              confirmButtonColor: "#9c0000"
+            });
+            inp.classList.toggle("error");
           }
-          if(inp.type === "url"){
+          if (inp.type === "url") {
             Swal.fire({
-            icon: "warning",
-            title: lang.startsWith("en") ? "Email is not valid!" : "Povezava ni pravilna!",
-            text: lang.startsWith("en") ? "Please make sure that the email is valid." : "Povezava mora biti veljavna...s",
-            confirmButtonColor: "#9c0000"
-          });
-          inp.classList.toggle("error");
+              icon: "warning",
+              title: lang.startsWith("en") ? "Invalid link" : "Neveljavna povezava",
+              text: lang.startsWith("en")
+                ? "Please enter a valid link that starts with http:// or https://."
+                : "Vnesite veljavno povezavo, ki se začne s http:// ali https://.",
+              confirmButtonColor: "#9c0000"
+            });
+            inp.classList.toggle("error");
           }
-          
+
         }
-          
+
 
 
         return;
