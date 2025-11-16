@@ -101,7 +101,7 @@
 
                             <div id="photography">
                                 <label for="photo">Upload a photo that will be used for promotion.</label>
-                                <input type="file" id="photo" name="photo">
+                                <input type="file" id="photo" name="photo" required>
                             </div>
 
                             <div id="rider">
@@ -110,12 +110,12 @@
                                     how many people are on stage, which instruments they play, who sings, 
                                     what equipment you need, etc.
                                 </label>
-                                <input type="file" id="rider" name="rider">
+                                <input type="file" id="rider" name="rider" required>
                             </div>
 
                             <div class="controls">
                                 <button type="button" class="prev">Back</button>
-                                <input type="submit" class="next" value="Submit">
+                                <input type="submit" class="next" value="Submit" required>
                             </div>
                         </div>
                     </div>
@@ -134,4 +134,5 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/form.js"></script>
 </body>
+
 </html>
