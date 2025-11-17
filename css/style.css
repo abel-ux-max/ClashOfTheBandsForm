@@ -38,10 +38,10 @@ html,body{
 #mainheader{
   z-index:3 ;
 }
- 
 #langblock{
     
-    height:60px;
+    height:3em;
+    font-size: 1.2em;
     width:100%;
     background-color: black;
 }
@@ -67,12 +67,11 @@ html,body{
     text-shadow: 2px 2px 0 #9c0000, 2px -2px 0 #9c0000, -2px 2px 0 #9c0000, -2px -2px 0 #9c0000, 2px 0px 0 #9c0000, 0px 2px 0 #9c0000, -2px 0px 0 #9c0000, 0px -2px 0 #9c0000;
 }
 #language{
-    line-height: 60px;
+    line-height: 3em;
     float:right;
     position: sticky;
     margin-right: 20px;
     letter-spacing: 10px;
-    font-size: 20px;
     
     
 }
@@ -236,16 +235,18 @@ button,input[type=submit]{
 }
 
 #mainfoot{
-    margin-top: auto;
+    margin-top: 15px;
     width: 100%;
     color:white;
     text-align: center;
-    height:60px;
-    line-height: 60px;
+    height:3em;
+    font-size: 1.2em;
+    line-height: 3em;
     background-color: black;
     z-index: 3;
 }
 #mainfoot a{
+    font-size: 0.8em;
     color: white;
     text-transform: capitalize;
     text-decoration: none;
@@ -298,4 +299,5 @@ button,input[type=submit]{
   
   border:#c40000 2px solid;
 }
+
 
