@@ -1,3 +1,4 @@
+/*Made by Abel E.*/
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 *{
@@ -272,6 +273,7 @@ button,input[type=submit]{
   padding: 8px;
   background: #ddd;
   border-radius: 6px;
+    transition: background-color 0.5s, color 0.5s;
 }
 .progress .active {
   background: #9c0000;
@@ -299,5 +301,6 @@ button,input[type=submit]{
   
   border:#c40000 2px solid;
 }
+
 
 
