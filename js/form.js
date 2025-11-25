@@ -1,6 +1,8 @@
 const steps = document.querySelectorAll(".step");
 const progress = document.querySelectorAll(".progress div");
 const lang = document.documentElement.lang || "sl";
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("sideMenu");
 /* burek velikonocno jajce*/
 let current = 0;
 
@@ -107,4 +109,61 @@ document.querySelector("#signform").addEventListener("submit", e => {
 
 
 
+});
+
+hamburger.addEventListener("click", function () {
+  menu.classList.toggle("open");
+});
+
+document.addEventListener("click", function (e) {
+  if (!menu.contains(e.target) && e.target !== hamburger) {
+    menu.classList.remove("open");
+  }
+});
+
+document.getElementById("openCredits").addEventListener("click", function () {
+  Swal.fire({
+    icon: "info",
+    title: lang.startsWith("en") ? "Credits" : "Avtor",
+    html: `
+      <div style="
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1rem;
+      ">
+        <p style="margin: 0;">
+          ${lang.startsWith("en")
+        ? "Design & Frontend: <strong>Abel Elersič</strong>"
+        : "Oblikovanje in frontend: <strong>Abel Elersič</strong>"}
+        </p>
+
+        <p style="margin: 0; font-size: 0.9rem;">
+          ${lang.startsWith("en") ? "Social links:" : "Družbena omrežja:"}
+        </p>
+
+        <a href="https://www.instagram.com/abelelersic" 
+           target="_blank"
+           style="
+             color: #9c0000; 
+             font-weight: bold;
+             text-decoration: none;
+           ">
+          Instagram
+        </a>
+
+        <a href="https://github.com/abel-ux-max" 
+           target="_blank"
+           style="
+             color: #9c0000; 
+             font-weight: bold;
+             text-decoration: none;
+           ">
+          GitHub
+        </a>
+      </div>
+    `,
+    confirmButtonColor: "#9c0000",
+    width: 400,
+  });
 });

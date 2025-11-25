@@ -14,6 +14,13 @@
 <body>
     <div id="mainblock">
         <header id="mainheader">
+            <div id="hamburger">&#9776;</div>
+            <nav id="sideMenu">
+                <ul>
+                    <li id="openCredits">Credits</li>
+                    <li><a href="#">Other Link</a></li>
+                </ul>
+            </nav>
             <div id="langblock">
                 <div id="language">
                     <a href="index.html"><span class="fi fi-si"></span></a>
@@ -29,7 +36,7 @@
         <section id="formblock">
 
             <header id="signhead">Application</header>
-            
+
             <article id="sign">
                 <form id="signform" method="POST" action="">
 
@@ -43,10 +50,13 @@
                         <!-- STEP 1 -->
                         <div class="step s1 active">
                             <h3>Performer Information</h3>
-                            <input class="vnos" type="text" name="band_name" required placeholder="Performer / Band name">
-                            <input class="vnos" type="text" name="representative_name" required placeholder="Name and surname of representative">
+                            <input class="vnos" type="text" name="band_name" required
+                                placeholder="Performer / Band name">
+                            <input class="vnos" type="text" name="representative_name" required
+                                placeholder="Name and surname of representative">
                             <input class="vnos" type="email" name="email" required placeholder="Email address">
-                            <input class="vnos" type="tel" name="telnum" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" placeholder="Phone number format: 000 000 000" required>
+                            <input class="vnos" type="tel" name="telnum" pattern="[0-9]{3} [0-9]{3} [0-9]{3}"
+                                placeholder="Phone number format: 000 000 000" required>
                             <div class="controls">
                                 <button type="button" class="next">Next</button>
                             </div>
@@ -58,27 +68,36 @@
                             <div id="song1">
                                 <div class="songnumber">1</div>
                                 <div class="songdetails">
-                                    <input class="vnos" type="text" name="song1name" required placeholder="Title of song 1">
-                                    <input class="vnos" type="text" name="song1author" required placeholder="Authors of song 1">
-                                    <input class="vnos" type="url" name="song1link" required placeholder="Link to song 1">
+                                    <input class="vnos" type="text" name="song1name" required
+                                        placeholder="Title of song 1">
+                                    <input class="vnos" type="text" name="song1author" required
+                                        placeholder="Authors of song 1">
+                                    <input class="vnos" type="url" name="song1link" required
+                                        placeholder="Link to song 1">
                                 </div>
                             </div>
 
                             <div id="song2">
                                 <div class="songnumber">2</div>
                                 <div class="songdetails">
-                                    <input class="vnos" type="text" name="song2name" required placeholder="Title of song 2">
-                                    <input class="vnos" type="text" name="song2author" required placeholder="Authors of song 2">
-                                    <input class="vnos" type="url" name="song2link" required placeholder="Link to song 2">
+                                    <input class="vnos" type="text" name="song2name" required
+                                        placeholder="Title of song 2">
+                                    <input class="vnos" type="text" name="song2author" required
+                                        placeholder="Authors of song 2">
+                                    <input class="vnos" type="url" name="song2link" required
+                                        placeholder="Link to song 2">
                                 </div>
                             </div>
 
                             <div id="song3">
                                 <div class="songnumber">3</div>
                                 <div class="songdetails">
-                                    <input class="vnos" type="text" name="song3name" required placeholder="Title of song 3">
-                                    <input class="vnos" type="text" name="song3author" required placeholder="Authors of song 3">
-                                    <input class="vnos" type="url" name="song3link" required placeholder="Link to song 3">
+                                    <input class="vnos" type="text" name="song3name" required
+                                        placeholder="Title of song 3">
+                                    <input class="vnos" type="text" name="song3author" required
+                                        placeholder="Authors of song 3">
+                                    <input class="vnos" type="url" name="song3link" required
+                                        placeholder="Link to song 3">
                                 </div>
                             </div>
 
@@ -106,8 +125,8 @@
 
                             <div id="rider">
                                 <label for="rider">
-                                    Upload your technical rider. This document should describe your live performance — 
-                                    how many people are on stage, which instruments they play, who sings, 
+                                    Upload your technical rider. This document should describe your live performance —
+                                    how many people are on stage, which instruments they play, who sings,
                                     what equipment you need, etc.
                                 </label>
                                 <input type="file" id="rider" name="rider" required>
@@ -126,7 +145,7 @@
         </section>
 
         <footer id="mainfoot">
-            <div><a href="">Privacy Policy | Cookie Policy</a></div>
+            <div><a href="#">Privacy Policy | Cookie Policy</a></div>
             <div></div>
         </footer>
         <div class="statika"></div>
