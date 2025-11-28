@@ -14,7 +14,7 @@ vizualnim stilom, validacijo v realnem času in dvojezično podporo.
 
 ##  Vizualna estetika
 
-Temačna tema, rdeči poudarki, statika, pixel-noise, močni kontrasti.\
+Temačna tema, rdeči poudarki, statika, pixel-noise, močni kontrasti.
 
 ##  Uporabljene tehnologije
 
