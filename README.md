@@ -14,7 +14,7 @@ vizualnim stilom, validacijo v realnem času in dvojezično podporo.
 
 ##  Vizualna estetika
 
-Dark theme, rdeči poudarki, statika, pixel-noise, močni kontrasti.\
+Temačna tema, rdeči poudarki, statika, pixel-noise, močni kontrasti.\
 
 ##  Uporabljene tehnologije
 
@@ -51,7 +51,7 @@ visual style, real-time validation and bilingual support.
 
 ## Visual aesthetics
 
-Dark theme, red powders, static, pixel noise, strong contrasts.\
+Dark theme, red powders, static, pixel noise, strong contrasts.
 
 ## Technologies used
 
