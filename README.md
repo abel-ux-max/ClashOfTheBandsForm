@@ -1,40 +1,3 @@
-# SL
-# **Bitka Bendov -- Prijavni Sistem** 
-
-Interaktiven večstopenjski prijavni sistem za *Bitko bendov*, z ostrim
-vizualnim stilom, validacijo v realnem času in dvojezično podporo. 
-
-##  Funkcionalnosti
-
--    **3-korakni prijavni obrazec**
--    **Real-time validacija** (email, telefon, URL)
--    **SweetAlert2 opozorila in potrditve**
--    **Slovenščina & angleščina**
--    **Indikator napredka** (1--2--3)
-
-##  Vizualna estetika
-
-Temačna tema, rdeči poudarki, statika, pixel-noise, močni kontrasti.
-
-##  Uporabljene tehnologije
-
--   HTML5
--   CSS3
--   Vanilla JavaScript
--   SweetAlert2
--   Google Fonts (New Rocker, Source Sans 3)
-
-
-##  Licenca
-
-MIT
-
-##  Avtor
-
-Abel Elersič
-
-
-# EN
 # **Clash of the Bands -- Form** 
 
 An interactive multi-stage registration system for *Clash of the Bands*, with a sharp
@@ -49,9 +12,24 @@ visual style, real-time validation and bilingual support.
 - **Slovenian & English**
 - **Progress indicator** (1--2--3)
 
-## Visual aesthetics
+## Pictures
+### Form steps
 
-Dark theme, red powders, static, pixel noise, strong contrasts.
+![Step 1](readme_img/step1.png)
+
+![Step 2](readme_img/step2.png)
+
+![Step 3](readme_img/step3.png)
+
+### SweetAlert2 Messages
+
+![email_error](readme_img/email.png)
+
+![phone_number_error](readme_img/phone.png)
+
+![missing_error](readme_img/missing.png)
+
+![success](readme_img/success.png)
 
 ## Technologies used
 
