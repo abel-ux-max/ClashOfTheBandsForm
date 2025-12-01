@@ -21,6 +21,10 @@ visual style, real-time validation and bilingual support.
 
 ![Step 3](readme_img/step3.png)
 
+### Hamburger menu
+
+![hamburger_menu](readme_img/hamburger.png)
+
 ### SweetAlert2 Messages
 
 ![email_error](readme_img/email.png)
