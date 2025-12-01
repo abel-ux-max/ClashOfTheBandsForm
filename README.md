@@ -25,7 +25,7 @@ visual style, real-time validation and bilingual support.
 
 ![email_error](readme_img/email.png)
 
-![phone_number_error](readme_img/phone.png)
+![phone_number_error](readme_img/number.png)
 
 ![missing_error](readme_img/missing.png)
 
